@@ -22,6 +22,8 @@ pause.addEventListener('click',(e)=>{
 Stop.addEventListener('click',(e)=>{
     e.preventDefault()
      clearInterval(interval)
+     sec=00
+     min=00
      contador.className='contador'
      contador.innerHTML='00:00:00'
     
