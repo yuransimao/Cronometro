@@ -9,31 +9,34 @@ let interval;
 
 start.addEventListener('click',(e)=>{
     e.preventDefault()
-    interval = setInterval(wath, 1000)
+    interval = setInterval(watch, 1000)
+    contador.className='contador'
 })
 
 pause.addEventListener('click',(e)=>{
     e.preventDefault()
      clearInterval(interval)
+     contador.className='contador pause-red'
 })
 
 Stop.addEventListener('click',(e)=>{
     e.preventDefault()
      clearInterval(interval)
-     sec=00;
-     min=00;
+     contador.className='contador'
      contador.innerHTML='00:00:00'
+    
+     
 })
 
 function twod(digit){
-    if(digit <=10){
+    if(digit < 10){
         return ('0' +digit)
     }
     else{
         return digit
     }
 }
-function wath() {
+function watch() {
     sec++
     if(sec==60){
         min++
