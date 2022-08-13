@@ -88,4 +88,6 @@ html,body{
 
 .pause-red{
     color:rgb(255, 0, 0);
+    border: 2px solid red;
+    border-radius: 4px;
 }

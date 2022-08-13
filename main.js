@@ -8,17 +8,17 @@ let hour = 00
 let interval;
 
 
-start.addEventListener('click',(e)=>{
+start.addEventListener('click',()=>{
     interval = setInterval(watch, 10)
     contador.className='contador'
 })
 
-pause.addEventListener('click',(e)=>{
+pause.addEventListener('click',()=>{
      clearInterval(interval)
      contador.className='contador pause-red'
 })
 
-Stop.addEventListener('click',(e)=>{
+Stop.addEventListener('click',()=>{
    
      clearInterval(interval)
      sec=00
