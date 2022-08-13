@@ -2,25 +2,24 @@ const start = document.getElementById('start')
 const pause = document.getElementById('pause')
 const Stop = document.getElementById('stop')
 const contador= document.getElementById('contador')
-var sec=00;
-var min=00;
-var hour=00
+let sec = 00;
+let min = 00;
+let hour = 00
 let interval;
 
+
 start.addEventListener('click',(e)=>{
-    e.preventDefault()
-    interval = setInterval(watch, 1000)
+    interval = setInterval(watch, 10)
     contador.className='contador'
 })
 
 pause.addEventListener('click',(e)=>{
-    e.preventDefault()
      clearInterval(interval)
      contador.className='contador pause-red'
 })
 
 Stop.addEventListener('click',(e)=>{
-    e.preventDefault()
+   
      clearInterval(interval)
      sec=00
      min=00
