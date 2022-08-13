@@ -1,6 +1,6 @@
 const start = document.getElementById('start')
 const pause = document.getElementById('pause')
-const stop = document.getElementById('stop')
+const Stop = document.getElementById('stop')
 const contador= document.getElementById('contador')
 var sec=00;
 var min=00;
@@ -12,6 +12,27 @@ start.addEventListener('click',(e)=>{
     interval = setInterval(wath, 1000)
 })
 
+pause.addEventListener('click',(e)=>{
+    e.preventDefault()
+     clearInterval(interval)
+})
+
+Stop.addEventListener('click',(e)=>{
+    e.preventDefault()
+     clearInterval(interval)
+     sec=00;
+     min=00;
+     contador.innerHTML='00:00:00'
+})
+
+function twod(digit){
+    if(digit <=10){
+        return ('0' +digit)
+    }
+    else{
+        return digit
+    }
+}
 function wath() {
     sec++
     if(sec==60){
@@ -24,7 +45,7 @@ function wath() {
         hour++
         
     }
-   contador.innerHTML=hour+':'+min+':'+sec
+   contador.innerHTML=twod(hour)+':'+twod(min)+':'+twod(sec)
 
 }
 
